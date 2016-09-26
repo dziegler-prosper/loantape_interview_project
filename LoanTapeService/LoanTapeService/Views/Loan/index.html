@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>LOAN TAPE</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<div>
+    <h2>All loans</h2>
+    <ul id="loans" />
+</div>
+<div>
+    <h2>Search by ID</h2>
+    <input type="text" id="loanId" size="5" />
+    <input type="button" value="Search" onclick="find();" />
+    <p id="loan" />
+</div>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+    var uri = 'api/LoanTape';
+
+    $(document).ready(function () {
+      $.getJSON(uri)
+          .done(function (data) {
+            $.each(data, function (key, item) {
+              $('<li>', { text: item.name }).appendTo($('#loans'));
+            });
+          });
+    });
+
+
+    function find() {
+        var id = $('#loanId').val();
+      $.getJSON(uri + '/' + id)
+          .done(function (data) {
+              $('#loan').text(data.name );
+          })
+          .fail(function (jqXHR, textStatus, err) {
+              $('#loan').text('Error: ' + err);
+          });
+    }
+</script>
+</body>
+</html>
