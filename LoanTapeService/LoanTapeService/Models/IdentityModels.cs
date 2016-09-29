@@ -29,5 +29,13 @@ namespace LoanTapeService.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<LoanTapeService.Models.Customer> Customers { get; set; }
+
+        public System.Data.Entity.DbSet<LoanTapeService.Models.Loan> Loans { get; set; }
+
+        public System.Data.Entity.DbSet<LoanTapeService.Models.ActionType> ActionTypes { get; set; }
+
+        public System.Data.Entity.DbSet<LoanTapeService.Models.Action> Actions { get; set; }
     }
 }

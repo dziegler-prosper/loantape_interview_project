@@ -234,14 +234,32 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActionsController.cs" />
+    <Compile Include="Controllers\ActionTypesController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoansController.cs" />
+    <Compile Include="Controllers\LoanTapeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LoanActions\DisbursementAction.cs" />
+    <Compile Include="LoanActions\InterestAccumulationAction.cs" />
+    <Compile Include="LoanActions\LoanAction.cs" />
+    <Compile Include="LoanActions\OriginationAction.cs" />
+    <Compile Include="LoanActions\PaymentAction.cs" />
+    <Compile Include="LoanActions\PostingPaymentAction.cs" />
+    <Compile Include="LoanActions\SignLoanAction.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Action.cs" />
+    <Compile Include="Models\ActionType.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\FilterActionInputModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\LoanTape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
